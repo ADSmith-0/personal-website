@@ -1,0 +1,17 @@
+#container {
+    position: fixed;
+    width: 100vw;
+    color: #141619;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.link {
+    padding: 20px;
+    line-height: 1.5rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
