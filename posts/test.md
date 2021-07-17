@@ -1,9 +1,8 @@
 ---
 title: 'test'
+cover_image: '/images/posts/image1.jpg'
 author: 'adam'
 date: '2020-01-01'
-published: true
+excerpt: 'Test excerpt'
 ---
-# Test
-
 lorem ipsum

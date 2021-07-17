@@ -1,12 +1,12 @@
 import Head from 'next/head';
-export default function about() {
+export default function index() {
     return (
         <>
             <Head>
-                <title>About</title>
+                <title>Projects</title>
             </Head>
             <div>
-                ABOUT
+                PROJECTS
             </div>
         </>
     )
