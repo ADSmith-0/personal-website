@@ -1,13 +1,30 @@
 import Head from 'next/head';
-export default function index() {
+import { GetStaticProps } from 'next';
+import { getAllProjectsData } from '../../lib/projects';
+import { sortByOrder } from '../../lib/util';
+import { ProjectType } from '../../types/project';
+import Project from '../../components/project-card';
+
+export const getStaticProps:GetStaticProps = async () => {
+    const projects = getAllProjectsData();
+
+    return{
+        props: {
+            projects: projects.sort(sortByOrder)
+        }
+    }
+}
+export default function index({ projects }:{ projects:ProjectType[]}) {
     return (
         <>
             <Head>
                 <title>Projects</title>
             </Head>
-            <div>
-                PROJECTS
-            </div>
+            <main>
+                { projects.map((project:ProjectType, index:number) => (
+                    <Project key={index} project={project} />
+                )) }
+            </main>
         </>
     )
 }

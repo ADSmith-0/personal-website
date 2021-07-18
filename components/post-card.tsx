@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import path from 'path';
-export default function Card({ post:{
+import { PostType } from '../types/post';
+export default function PostCard({ post:{
         slug, 
         frontmatter:{
             title, 
@@ -8,16 +9,7 @@ export default function Card({ post:{
             author, 
             excerpt
         }
-    }}: { 
-    post: { 
-        slug: string,
-        frontmatter: { 
-            title: string, 
-            date: string, 
-            author: string, 
-            excerpt: string
-        }
-    }}) {
+    }}: {post: PostType}) {
     return (
         <div className="card">
             <h3>{title}</h3>

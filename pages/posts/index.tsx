@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import { getAllPostsData } from '../../lib/posts';
 import { sortByDate } from '../../lib/util';
 import { PostType } from '../../types/post';
-import Card from '../../components/card';
+import PostCard from '../../components/post-card';
 
 export const getStaticProps: GetStaticProps = async () => {
     const posts = getAllPostsData();
@@ -22,7 +22,7 @@ export default function index({ posts }:{ posts: PostType[]}) {
             </Head>
             <div className="posts">
                 { posts.map((post, index) => (
-                    <Card key={index} post={post} />
+                    <PostCard key={index} post={post} />
                 )) }
             </div>
         </>
