@@ -6,8 +6,8 @@ export default function projectCard({ project:{slug, frontmatter}}:{project: Pro
             <a href={frontmatter.link}>
                 <Image 
                     src={frontmatter.cover_image}
-                    height={300}
-                    width={420}
+                    height={150}
+                    width={200}
                     alt={frontmatter.title+" cover image"}
                 />
                 <h3>{frontmatter.title}</h3>

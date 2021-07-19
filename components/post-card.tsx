@@ -1,23 +1,35 @@
 import Link from 'next/link';
 import path from 'path';
 import { PostType } from '../types/post';
+import styles from '../styles/post-card.module.css';
+import Image from 'next/image';
+
 export default function PostCard({ post:{
         slug, 
         frontmatter:{
             title, 
+            cover_image,
             date, 
             author, 
             excerpt
         }
     }}: {post: PostType}) {
     return (
-        <div className="card">
-            <h3>{title}</h3>
-            <p>{date}</p>
-            <h4>{author}</h4>
-            <p>{excerpt}</p>
+        <div className={styles.card}>
+            <Image
+                src={cover_image}
+                className={styles.cover_image}
+                height={1250}
+                width={1500}
+                layout="intrinsic"
+                alt={title+" cover image"}
+            />
+            <p className={styles.date}>Posted on {date}</p>
+            <h3 className={styles.title}>{title}</h3>
+            <h4 className={styles.author}>Written by {author}</h4>
+            <p className={styles.excerpt}>{excerpt}</p>
             <Link href={path.join(process.cwd(), 'posts', slug)}>
-                <a>Read more &rarr;</a>
+                <a className={styles.btn_readmore}>Read more &rarr;</a>
             </Link>
         </div>
     )
