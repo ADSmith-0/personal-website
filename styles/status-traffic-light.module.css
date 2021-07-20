@@ -1,0 +1,19 @@
+.container {
+    position: relative;
+    display: block;
+}
+.symbol {
+    position: absolute;
+    color: transparent;
+    text-shadow: 1px 1px 1px #fff;
+}
+.normalSymbol {
+    line-height: 1rem;
+    top: 2px;
+    left: 5px;
+}
+.subtract {
+    top: 2px;
+    left: 3px;
+    font-size: 0.8rem;
+}

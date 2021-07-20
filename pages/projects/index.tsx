@@ -21,7 +21,7 @@ export default function index({ projects }:{ projects:ProjectType[]}) {
             <Head>
                 <title>Projects</title>
             </Head>
-            <main>
+            <main id={styles.container}>
                 { projects.map((project:ProjectType, index:number) => (
                     <Project key={index} project={project} />
                 )) }

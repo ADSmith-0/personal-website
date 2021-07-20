@@ -19,9 +19,8 @@ export default function PostCard({ post:{
             <Image
                 src={cover_image}
                 className={styles.cover_image}
-                height={1250}
+                height={1150}
                 width={1500}
-                layout="intrinsic"
                 alt={title+" cover image"}
             />
             <p className={styles.date}>Posted on {date}</p>

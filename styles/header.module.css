@@ -9,6 +9,7 @@
     border: 0px solid #444;
     border-bottom-width: 1px;
     background-color: #fff;
+    z-index: 9;
 }
 .link {
     box-sizing: border-box;

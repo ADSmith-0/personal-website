@@ -1,5 +1,5 @@
 .card {
-    background-color: #efefef;
+    background-color: #fcfcfc;
     border: 1px solid #555;
     border-radius: 5px;
     display: grid;
@@ -20,7 +20,16 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+.date {
+    background-color: #eee;
+    justify-self: stretch;
+    padding: 10px 15px;
+}
 .title, .date, .author { margin: 0; }
+.title {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
 .author {
     font-weight: normal;
     font-style: italic;
