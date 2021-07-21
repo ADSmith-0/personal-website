@@ -1,9 +1,11 @@
 ---
-link: 'https://www.google.co.uk'
+github_link: 'https://github.com/ADSmith-0/Artist-Network'
+live_link: 'https://artist-network01.herokuapp.com/'
 title: 'Artist Network'
 cover_image: '/images/projects/image1.jpg'
-status: 'In Progress'
+tags: ['React', 'Express', 'Node.js', 'Neo4j', 'Cypher', 'OAuth 2.0', 'vivagraph.js']
+status: 'Completed'
 live: 'Partially'
-excerpt: 'Test'
-order: 2
+excerpt: 'A web app that would display the most popular spotify artists, as well as recommend artists based on your personal preference'
+order: 5
 ---
