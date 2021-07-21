@@ -2,7 +2,7 @@
 github_link: 'https://github.com/ADSmith-0/food-map'
 live_link: 'https://food-map01.herokuapp.com'
 title: 'Food Map'
-cover_image: '/images/projects/image1.jpg'
+cover_image: '/images/projects/image2.jpg'
 tags: ['React', 'SVG']
 status: 'In Progress'
 live: 'Yes'

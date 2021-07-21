@@ -2,7 +2,7 @@
 github_link: 'https://github.com/ADSmith-0/Artist-Network'
 live_link: 'https://artist-network01.herokuapp.com/'
 title: 'Artist Network'
-cover_image: '/images/projects/image1.jpg'
+cover_image: '/images/projects/image2.jpg'
 tags: ['React', 'Express', 'Node.js', 'Neo4j', 'Cypher', 'OAuth 2.0', 'vivagraph.js']
 status: 'Completed'
 live: 'Partially'
