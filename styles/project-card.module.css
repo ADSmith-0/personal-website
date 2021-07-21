@@ -51,8 +51,10 @@
     margin-left: 8px;
 }
 .links {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    place-items: center;
 }
 #githubLink {
     background-color: #555;
@@ -66,5 +68,4 @@
     border-radius: 10px;
     color: #fff;
     padding: 10px 15px;
-    line-height: 1rem;
 }
