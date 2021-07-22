@@ -11,12 +11,3 @@
     background-color: #fff;
     z-index: 9;
 }
-.link {
-    box-sizing: border-box;
-    padding: 20px;
-    line-height: 1.5rem;
-    color: #444;
-}
-.link:hover {
-    color: #000;
-}
