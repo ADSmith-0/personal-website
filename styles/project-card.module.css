@@ -16,6 +16,7 @@
     border-radius: 10px;
     border: 1px solid #999 !important;
     object-fit: contain;
+    
 }
 .label {
     margin: 0 12px 0 0;
@@ -48,7 +49,7 @@
     margin-right: 10px;
     margin-bottom: 5px;
     box-sizing: border-box;
-    cursor: pointer;
+    cursor: default;
     user-select: none;
 }
 .container {
