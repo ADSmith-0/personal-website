@@ -8,6 +8,7 @@ export type ProjectType = {
         tags: string[],
         status: string,
         live: string,
+        description: string,
         order: number
     }
 };

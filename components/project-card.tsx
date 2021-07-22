@@ -10,8 +10,9 @@ export default function projectCard({ project:{frontmatter}}:{project: ProjectTy
                 <Image 
                     src={frontmatter.cover_image}
                     height={250}
-                    width={400}
+                    width={500}
                     layout="intrinsic"
+                    objectFit="contain"
                     alt={frontmatter.title+" cover image"}
                 />
             </a>
@@ -30,6 +31,10 @@ export default function projectCard({ project:{frontmatter}}:{project: ProjectTy
                 <p className={styles.label}>Live: </p>
                 <LiveTrafficLight live={frontmatter.live} />
                 <p className={styles.statusText}>{frontmatter.live}</p>
+            </div>
+            <div className={styles.container}>
+                <p className={styles.label}>Description: </p>
+                <p id={styles.description}>{frontmatter.description}</p>
             </div>
             <div className={styles.links}>
                 <a id={styles.githubLink} className={styles.link} href={frontmatter.github_link}>Link to Github &rarr;</a>

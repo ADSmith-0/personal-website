@@ -6,6 +6,6 @@ cover_image: '/images/projects/image2.jpg'
 tags: ['Next.js']
 status: 'In Progress'
 live: 'No'
-excerpt: 'The portfolio website that you are currently on'
+description: 'The portfolio website that you are currently on'
 order: 6
 ---

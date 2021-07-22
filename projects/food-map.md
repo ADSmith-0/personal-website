@@ -6,6 +6,6 @@ cover_image: '/images/projects/image2.jpg'
 tags: ['React', 'SVG']
 status: 'In Progress'
 live: 'Yes'
-excerpt: 'A web app that would display the most popular spotify artists, as well as recommend artists based on your personal preference'
+description: 'A web app that would display the most popular spotify artists, as well as recommend artists based on your personal preference'
 order: 4
 ---

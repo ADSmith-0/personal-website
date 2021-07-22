@@ -6,6 +6,6 @@ cover_image: '/images/projects/image2.jpg'
 tags: ['React', 'Express', 'Node.js', 'Neo4j', 'Cypher', 'OAuth 2.0', 'vivagraph.js']
 status: 'Completed'
 live: 'Partially'
-excerpt: 'A web app that would display the most popular spotify artists, as well as recommend artists based on your personal preference'
+description: 'A web app that would display the most popular spotify artists, as well as recommend artists based on your personal preference'
 order: 5
 ---
