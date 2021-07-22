@@ -6,7 +6,7 @@ import LiveTrafficLight from './live-traffic-light';
 export default function projectCard({ project:{frontmatter}}:{project: ProjectType}) {
     return (
         <div className={styles.card}>
-            <a className={styles.link} href={frontmatter.github_link}>
+            <a className={styles.image_link} href={frontmatter.github_link}>
                 <Image 
                     src={frontmatter.cover_image}
                     height={250}
@@ -32,8 +32,13 @@ export default function projectCard({ project:{frontmatter}}:{project: ProjectTy
                 <p className={styles.statusText}>{frontmatter.live}</p>
             </div>
             <div className={styles.links}>
-                <a id={styles.githubLink} href={frontmatter.github_link}>Link to Github &rarr;</a>
-                <a id={styles.liveLink} href={frontmatter.live_link}>Link to live project &rarr;</a>
+                <a id={styles.githubLink} className={styles.link} href={frontmatter.github_link}>Link to Github &rarr;</a>
+                <a 
+                    id={styles.liveLink}
+                    className={(frontmatter.live_link == '#') ? `${styles.link} ${styles.disabled}` : `${styles.link} ${styles.enabled}`}
+                    href={frontmatter.live_link}>
+                        Link to live project &rarr;
+                </a>
             </div>
         </div>
     )

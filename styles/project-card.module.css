@@ -9,7 +9,7 @@
 .title {
     margin: 0;
 }
-.link {
+.image_link {
     justify-self: center;
 }
 .cover_image {
@@ -56,16 +56,18 @@
     gap: 10px;
     place-items: center;
 }
-#githubLink {
-    background-color: #555;
+.link {
     border-radius: 10px;
     color: #fff;
     padding: 10px 15px;
     line-height: 1rem;
+    transition: background-color 0.2s linear 0s;
 }
-#liveLink {
-    background-color: #0d6efd;
-    border-radius: 10px;
-    color: #fff;
-    padding: 10px 15px;
+#githubLink { background-color: #161b22; }
+#githubLink:hover { background-color: #3a424d; }
+#liveLink { background-color: #0d6efd; }
+#liveLink:hover { background-color: #428eff; }
+.disabled {
+    background-image: repeating-linear-gradient(135deg, #555, #555 20px, #666 20px, #666 40px);
+    pointer-events: none;
 }
