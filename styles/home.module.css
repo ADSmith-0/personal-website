@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 1fr;
+}
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#title {
+    font-size: 3rem;
+}
+#intro {
+    font-size: 1.2rem;
+}
+#side_bar {
+    position: sticky;
+    top: 65px;
+}
+.link {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+.buffer {
+    height: 1000px;
+}
