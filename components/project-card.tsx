@@ -6,16 +6,14 @@ import LiveTrafficLight from './live-traffic-light';
 export default function projectCard({ project:{frontmatter}}:{project: ProjectType}) {
     return (
         <div className={styles.card}>
-            <a className={styles.image_link} href={frontmatter.github_link}>
-                <Image 
-                    src={frontmatter.cover_image}
-                    height={250}
-                    width={500}
-                    layout="intrinsic"
-                    objectFit="contain"
-                    alt={frontmatter.title+" cover image"}
-                />
-            </a>
+            <Image 
+                src={frontmatter.cover_image}
+                className={styles.cover_image}
+                height={300}
+                width={500}
+                objectFit="contain"
+                alt={frontmatter.title+" cover image"}
+            />
             <h3 className={styles.title}>{frontmatter.title}</h3>
             <div className="pills">
                 { frontmatter.tags.map((tag, index) => (
@@ -25,14 +23,14 @@ export default function projectCard({ project:{frontmatter}}:{project: ProjectTy
             <div className={styles.container}>
                 <p className={styles.label}>Status: </p>
                 <StatusTrafficLight status={frontmatter.status} />
-                <p className={styles.statusText}>{frontmatter.status}</p>
+                <p className={styles.status_text}>{frontmatter.status}</p>
             </div>
             <div className={styles.container}>
                 <p className={styles.label}>Live: </p>
                 <LiveTrafficLight live={frontmatter.live} />
-                <p className={styles.statusText}>{frontmatter.live}</p>
+                <p className={styles.live_text}>{frontmatter.live}</p>
             </div>
-            <div className={styles.container}>
+            <div id={styles.description_container}className={styles.container}>
                 <p className={styles.label}>Description: </p>
                 <p id={styles.description}>{frontmatter.description}</p>
             </div>

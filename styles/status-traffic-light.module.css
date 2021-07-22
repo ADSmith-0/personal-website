@@ -8,12 +8,13 @@
     text-shadow: 1px 1px 1px #fff;
 }
 .normalSymbol {
-    line-height: 1rem;
-    top: 3px;
+    line-height: 25px;
+    top: -1px;
     left: 5px;
 }
 .subtract {
-    top: 2px;
+    line-height: 25px;
+    top: -2px;
     left: 2px;
     font-size: 0.8rem;
 }

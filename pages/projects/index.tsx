@@ -25,7 +25,6 @@ export default function index({ projects }:{ projects:ProjectType[]}) {
                 { projects.map((project:ProjectType, index:number) => (
                     <Project key={index} project={project} />
                 )) }
-                <div className={styles.buffer}></div>
             </main>
         </>
     )
