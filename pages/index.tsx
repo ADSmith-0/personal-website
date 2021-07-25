@@ -11,13 +11,15 @@ export default function Home() {
       <main className={styles.container}>
         <aside id={styles.side_bar}>
           <Image
-            src='/images/profile.jpg'
-            height={250}
-            width={250}
+            src='/images/profile-picture.jpg'
+            height={150}
+            width={150}
             alt="Picture of Adam"
+            id={styles.profile_picture}
           />
           <div id={styles.links}>
             <h3 id={styles.author_name}>Adam Smith</h3>
+            <a className={styles.link} href="https://www.linkedin.com/in/adam-smith-9728511ba/">LinkedIn Profile</a>
           </div>
         </aside>
         <section id="text">
@@ -28,7 +30,7 @@ export default function Home() {
           <section className="projects">
             <Link href="/projects">
               <a className={styles.link}>
-                <h2 className={styles.subtitle}>Projects</h2>
+                <h2 className={styles.subtitle}>Projects &rarr;</h2>
               </a>
             </Link>
             <p className={styles.description}>
@@ -39,7 +41,7 @@ export default function Home() {
           <section className="posts">
             <Link href="/projects">
               <a className={styles.link}>
-                <h2 className={styles.subtitle}>Posts</h2>
+                <h2 className={styles.subtitle}>Posts &rarr;</h2>
               </a>
             </Link>
             <p className={styles.description}>

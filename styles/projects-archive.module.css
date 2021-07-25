@@ -5,3 +5,9 @@
     width: clamp(800px, 70vw, 1500px);
     margin: 30px auto;
 }
+@media screen and (max-width:800px){
+    #container {
+        grid-template-columns: 1fr;
+        width: 350px;
+    }
+}
