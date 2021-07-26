@@ -9,7 +9,7 @@ export default function Home() {
         <title>Home</title>
       </Head>
       <main className={styles.container}>
-        <aside id={styles.side_bar}>
+        {/* <aside id={styles.side_bar}>
           <Image
             src='/images/profile-picture.jpg'
             height={150}
@@ -21,13 +21,13 @@ export default function Home() {
             <h3 id={styles.dev_name}>Adam Smith</h3>
             <a className={styles.link} href="https://www.linkedin.com/in/adam-smith-9728511ba/">LinkedIn Profile</a>
           </div>
-        </aside>
+        </aside> */}
         <section id="text">
           <h1 id={styles.title}>Welcome to my website</h1>
           <p id="intro" className={styles.description}>Hello, My name is Adam and I&apos;m a 23 year old web developer. 
             I enjoy building websites and web apps and learning new technologies. Find out more about me in my <Link href="/about"><a className={styles.link}>about page</a></Link>.
           </p>
-          <section className="projects">
+          <section id={styles.projects} className={styles.link_section}>
             <Link href="/projects">
               <a className={styles.link}>
                 <h2 className={styles.subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
@@ -38,7 +38,7 @@ export default function Home() {
               to the projects page, here&apos;s some of the highlights:
             </p>
           </section>
-          <section className="posts">
+          <section id={styles.posts} className={styles.link_section}>
             <Link href="/projects">
               <a className={styles.link}>
                 <h2 className={styles.subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
