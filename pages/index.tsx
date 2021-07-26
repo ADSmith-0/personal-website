@@ -23,7 +23,7 @@ export default function Home() {
           </div>
         </aside>
         <section id="text">
-          <h1 id={styles.title}>Welcome to [my website]</h1>
+          <h1 id={styles.title}>Welcome to my website</h1>
           <p id="intro" className={styles.description}>Hello, My name is Adam and I&apos;m a 23 year old web developer. 
             I enjoy building websites and web apps and learning new technologies. Find out more about me in my <Link href="/about"><a className={styles.link}>about page</a></Link>.
           </p>
