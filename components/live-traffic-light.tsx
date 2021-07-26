@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from '../styles/live-traffic-light.module.css';
 const getIcon = (live:string) => {
     const colour = (live == "Yes") ? 'green' : 'orange'; 
-    const icon = `/images/${colour}_signal_white_background.png`;
+    const icon = `/images/${colour}_signal.png`;
     return (
         <Image 
             src={icon}

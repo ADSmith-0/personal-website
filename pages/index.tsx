@@ -18,7 +18,7 @@ export default function Home() {
             id={styles.profile_picture}
           />
           <div id={styles.links}>
-            <h3 id={styles.author_name}>Adam Smith</h3>
+            <h3 id={styles.dev_name}>Adam Smith</h3>
             <a className={styles.link} href="https://www.linkedin.com/in/adam-smith-9728511ba/">LinkedIn Profile</a>
           </div>
         </aside>
@@ -30,7 +30,7 @@ export default function Home() {
           <section className="projects">
             <Link href="/projects">
               <a className={styles.link}>
-                <h2 className={styles.subtitle}>Projects &rarr;</h2>
+                <h2 className={styles.subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
               </a>
             </Link>
             <p className={styles.description}>
@@ -41,7 +41,7 @@ export default function Home() {
           <section className="posts">
             <Link href="/projects">
               <a className={styles.link}>
-                <h2 className={styles.subtitle}>Posts &rarr;</h2>
+                <h2 className={styles.subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
               </a>
             </Link>
             <p className={styles.description}>

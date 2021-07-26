@@ -11,3 +11,9 @@
     background-color: #fff;
     z-index: 9;
 }
+@media(prefers-color-scheme: dark) {
+    #container {
+        background-color: #161b22;
+        border-color: #999;
+    }
+}

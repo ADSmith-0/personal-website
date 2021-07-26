@@ -13,6 +13,9 @@
 #profile_picture {
     border-radius: 50%;
 }
+#dev_name {
+    text-align: center;
+}
 #title { font-size: 3rem; }
 .description { font-size: 1.2rem; }
 #side_bar {
@@ -20,11 +23,35 @@
     top: 65px;
 }
 .link {
-    color: #0d6efd;
-    text-decoration: underline;
+    color: var(--primary-colour);
 }
-.subtitle { font-size: 2.1rem; }
+.subtitle {
+    position: relative;
+    font-size: 2.1rem; 
+    color: var(--primary-colour);
+    display: inline-block;
+    background-image: linear-gradient(0deg, var(--primary-colour) 2px 2px, transparent 2px 100%);
+    background-size: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease-in-out 0s; 
+}
+.subtitle:hover { background-size: 100%; }
+.arrow {
+    display: none;
+    color: var(--primary-colour);
+    animation: fadeIn 0.2s linear 0s;
+}
+.subtitle:hover > .arrow {
+    display: inline-block;
+}
 #post_description { font-size: 1.2rem; }
 .buffer {
     height: 1000px;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@media (prefers-color-theme: dark) {
+    .subtitle { color: var(--primary-colour); }
 }
