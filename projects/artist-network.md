@@ -8,4 +8,5 @@ status: 'Completed'
 live: 'Partially'
 description: 'A web app that would display the most popular spotify artists, as well as recommend artists based on your personal preference'
 order: 5
+featured: true
 ---

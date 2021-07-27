@@ -8,4 +8,5 @@ status: 'In Progress'
 live: 'No'
 description: 'The portfolio website that you are currently on'
 order: 6
+featured: false
 ---

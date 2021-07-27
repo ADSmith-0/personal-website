@@ -8,4 +8,5 @@ status: 'Completed'
 live: 'No'
 description: 'The prototype to a dating app, written in Java for Android'
 order: 2
+featured: false
 ---

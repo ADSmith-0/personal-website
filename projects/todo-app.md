@@ -8,4 +8,5 @@ status: 'Completed'
 live: 'Yes'
 description: 'Simple Todo app'
 order: 1
+featured: false
 ---

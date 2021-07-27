@@ -8,4 +8,5 @@ status: 'Completed'
 live: 'No'
 description: 'A Python web scraper that would scrape table data and output it as a spreadsheet'
 order: 3
+featured: true
 ---
