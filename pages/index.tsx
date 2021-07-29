@@ -70,11 +70,11 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
               If you&apos;re interested in looking at the projects that I&apos;ve made then head over
               to the projects page, here&apos;s some of the highlights:
             </p>
-                <Carousel>
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project}/>
-                    ))}
-                </Carousel>
+            <Carousel>
+                {projects.map((project, index) => (
+                    <ProjectCard key={index} project={project}/>
+                ))}
+            </Carousel>
           </section>
           <section id={styles.posts} className={styles.link_section}>
             <Link href="/projects">
