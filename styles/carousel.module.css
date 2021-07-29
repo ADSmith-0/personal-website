@@ -1,10 +1,14 @@
-#carousel {
+#container {
     position: relative;
+}
+#carousel {
     gap: 10px;
-    width: 460px;
+    width: 910px;
+    overflow-x: scroll;
     margin: auto;
-    /* height: 500px; */
     animation: fadeIn 0.4s linear 0s;
+    display: flex;
+    flex-direction: row;
 }
 .btn {
     position: absolute;
