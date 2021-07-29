@@ -9,6 +9,7 @@
     grid-template-rows: auto auto 1fr auto auto 1fr auto;
     gap: 10px;
     align-items: center;
+    min-width: 450px;
 }
 .card:hover{ box-shadow: 0 8px 16px 0 #00000033; }
 .title {
@@ -97,4 +98,11 @@
         box-shadow: 0 4px 8px 0 #00000033;
     }
     .card:hover{ box-shadow: 0 8px 16px 0 #00000033; }
+    #githubLink {
+        background-color: #ddd;
+        color: #222;
+        border: 1px solid transparent;
+        transition: all 0.2s ease-in-out 0s;
+    }
+    #githubLink:hover { background-color: #fff; }
 }

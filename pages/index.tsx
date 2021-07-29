@@ -7,6 +7,8 @@ import { getAllProjectsData } from '../lib/projects';
 import { getAllPostsData } from '../lib/posts';
 import { ProjectType } from '../types/project';
 import { PostType } from '../types/post';
+import Carousel from '../components/carousel';
+import ProjectCard from '../components/project-card';
 export const getStaticProps:GetStaticProps = async () => {
   const Projects = getAllProjectsData();
   const Posts = getAllPostsData();
@@ -68,12 +70,17 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
               If you&apos;re interested in looking at the projects that I&apos;ve made then head over
               to the projects page, here&apos;s some of the highlights:
             </p>
+                <Carousel>
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} project={project}/>
+                    ))}
+                </Carousel>
           </section>
           <section id={styles.posts} className={styles.link_section}>
             <Link href="/projects">
                 <a className={styles.link}>
                 <h2 className={styles.subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
-              </  a>
+              </a>
             </Link>
             <p className={styles.description}>
               I sometimes find something that I want to write about, if you&apos;re interesting

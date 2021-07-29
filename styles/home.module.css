@@ -86,6 +86,12 @@
     }
     100% { transform: translateX(0px); }
 }
+#featured_projects {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
 @media(prefers-color-scheme: light) {
     #dev_name {
         color: #000;
