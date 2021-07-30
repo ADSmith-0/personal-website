@@ -76,7 +76,11 @@
     gap: 20px;
     align-items: start;
 }
-#projects { background-image: linear-gradient(45deg, #0d6efd, #3586ff, #0d6efd); }
+#projects_text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: linear-gradient(45deg, #0d6efd, #3586ff, #0d6efd);
+}
 #posts_row {
     display: grid;
     grid-template-columns: auto 1fr;

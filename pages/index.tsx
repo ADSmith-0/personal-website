@@ -61,8 +61,7 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
           </div>
         </section>
         <section id={styles.blocks}>
-					<div id={styles.projects_row}>
-						<section id={styles.projects} className={styles.link_section}>
+						<section id={styles.projects_text} className={styles.link_section}>
 							<Link href="/projects">
 								<a className={styles.link}>
 									<h2 className={styles.subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
@@ -72,20 +71,20 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
 								If you&apos;re interested in looking at the projects that I&apos;ve made then head over
 								to the projects page, here&apos;s some of the highlights:
 							</p>
-							<Carousel>
-									{projects.map((project, index) => (
-											<ProjectCard key={index} project={project}/>
-									))}
-							</Carousel>
+							<Image 
+								id={styles.projects_image}
+								src="/images/projects.jpg"
+								height={700}
+								width={700}
+								alt="Image representing projects"
+							/>
 						</section>
-						<Image 
-							id={styles.projects_image}
-							src="/images/projects.jpg"
-							height={700}
-							width={700}
-							alt="Image representing projects"
-						/>
-					</div>
+						<Carousel>
+								{projects.map((project, index) => (
+										<ProjectCard key={index} project={project}/>
+								))}
+						</Carousel>
+					</section>
 					<div id={styles.posts_row}>
 						<div>Dummy</div>
 						<section id={styles.posts} className={styles.link_section}>
@@ -106,7 +105,6 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
 							</Carousel>
 						</section>
 					</div>
-        </section>
       </main>
     </>
   )
