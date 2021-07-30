@@ -1,5 +1,7 @@
 .card {
     /* border: 1px solid #555; */
+    background-color: #fafafa;
+    color: #333;
     box-shadow: 0 4px 8px 0 #00000033;
     transition: 0.3s;
     border-radius: 10px;

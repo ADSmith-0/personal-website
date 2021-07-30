@@ -9,6 +9,7 @@ import { ProjectType } from '../types/project';
 import { PostType } from '../types/post';
 import Carousel from '../components/carousel';
 import ProjectCard from '../components/project-card';
+import PostCard from '../components/post-card';
 export const getStaticProps:GetStaticProps = async () => {
   const Projects = getAllProjectsData();
   const Posts = getAllPostsData();
@@ -60,34 +61,51 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
           </div>
         </section>
         <section id={styles.blocks}>
-          <section id={styles.projects} className={styles.link_section}>
-            <Link href="/projects">
-              <a className={styles.link}>
-                <h2 className={styles.subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
-              </a>
-            </Link>
-            <p className={styles.description}>
-              If you&apos;re interested in looking at the projects that I&apos;ve made then head over
-              to the projects page, here&apos;s some of the highlights:
-            </p>
-            <Carousel>
-                {projects.map((project, index) => (
-                    <ProjectCard key={index} project={project}/>
-                ))}
-            </Carousel>
-          </section>
-          <section id={styles.posts} className={styles.link_section}>
-            <Link href="/projects">
-                <a className={styles.link}>
-                <h2 className={styles.subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
-              </a>
-            </Link>
-            <p className={styles.description}>
-              I sometimes find something that I want to write about, if you&apos;re interesting
-              in seeing what I write about then head over to the posts page. Here are some
-              highlights:
-            </p>
-          </section>
+					<div id={styles.projects_row}>
+						<section id={styles.projects} className={styles.link_section}>
+							<Link href="/projects">
+								<a className={styles.link}>
+									<h2 className={styles.subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
+								</a>
+							</Link>
+							<p className={styles.description}>
+								If you&apos;re interested in looking at the projects that I&apos;ve made then head over
+								to the projects page, here&apos;s some of the highlights:
+							</p>
+							<Carousel>
+									{projects.map((project, index) => (
+											<ProjectCard key={index} project={project}/>
+									))}
+							</Carousel>
+						</section>
+						<Image 
+							id={styles.projects_image}
+							src="/images/projects.jpg"
+							height={700}
+							width={700}
+							alt="Image representing projects"
+						/>
+					</div>
+					<div id={styles.posts_row}>
+						<div>Dummy</div>
+						<section id={styles.posts} className={styles.link_section}>
+							<Link href="/projects">
+									<a className={styles.link}>
+									<h2 className={styles.subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
+								</a>
+							</Link>
+							<p className={styles.description}>
+								I sometimes find something that I want to write about, if you&apos;re interesting
+								in seeing what I write about then head over to the posts page. Here are some
+								highlights:
+							</p>
+							<Carousel>
+									{posts.map((post, index) => (
+											<PostCard key={index} post={post}/>
+									))}
+							</Carousel>
+						</section>
+					</div>
         </section>
       </main>
     </>
