@@ -60,51 +60,65 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
             </p>
           </div>
         </section>
-        <section id={styles.blocks}>
-						<section id={styles.projects_text} className={styles.link_section}>
-							<Link href="/projects">
-								<a className={styles.link}>
-									<h2 className={styles.subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
-								</a>
-							</Link>
-							<p className={styles.description}>
-								If you&apos;re interested in looking at the projects that I&apos;ve made then head over
-								to the projects page, here&apos;s some of the highlights:
-							</p>
-							<Image 
-								id={styles.projects_image}
-								src="/images/projects.jpg"
-								height={700}
-								width={700}
-								alt="Image representing projects"
-							/>
-						</section>
-						<Carousel>
-								{projects.map((project, index) => (
-										<ProjectCard key={index} project={project}/>
-								))}
-						</Carousel>
-					</section>
-					<div id={styles.posts_row}>
-						<div>Dummy</div>
-						<section id={styles.posts} className={styles.link_section}>
-							<Link href="/projects">
-									<a className={styles.link}>
-									<h2 className={styles.subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
-								</a>
-							</Link>
-							<p className={styles.description}>
-								I sometimes find something that I want to write about, if you&apos;re interesting
-								in seeing what I write about then head over to the posts page. Here are some
-								highlights:
-							</p>
-							<Carousel>
-									{posts.map((post, index) => (
-											<PostCard key={index} post={post}/>
-									))}
-							</Carousel>
-						</section>
-					</div>
+        <section className={styles.blocks}>
+            <section id={styles.projects_description} className={styles.description_section}>
+                <div id={styles.projects_text}>
+                    <Link href="/projects">
+                        <a className={styles.link}>
+                            <h2 className={styles.subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
+                        </a>
+                    </Link>
+                    <p className={styles.description}>
+                        If you&apos;re interested in looking at the projects that I&apos;ve made then head over
+                        to the projects page, here&apos;s some of the highlights:
+                    </p>
+                </div>
+                <Image 
+                    id={styles.projects_image}
+                    src="/images/projects.jpg"
+                    height={350}
+                    width={350}
+                    alt="Image representing projects"
+                />
+            </section>
+            <div className={styles.carousel_container}>
+                <Carousel className={styles.carousel_section}>
+                    {projects.map((project, index) => (
+                            <ProjectCard key={index} project={project}/>
+                    ))}
+                </Carousel>
+            </div>
+        </section>
+        <section className={styles.blocks}>
+            <section id={styles.posts_description} className={styles.description_section}>
+                <Image
+                    id={styles.projects_image}
+                    src="/images/projects.jpg"
+                    height={350}
+                    width={350}
+                    alt="Image representing posts"
+                />
+                <section id={styles.posts_text}>
+                    <Link href="/projects">
+                        <a className={styles.link}>
+                            <h2 className={styles.subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
+                        </a>
+                    </Link>
+                    <p className={styles.description}>
+                        I sometimes find something that I want to write about, if you&apos;re interesting
+                        in seeing what I write about then head over to the posts page. Here are some
+                        highlights:
+                    </p>
+                </section>
+            </section>
+            <div className={styles.carousel_container}>
+                <Carousel className={styles.carousel_section}>
+                    {posts.map((post, index) => (
+                            <PostCard key={index} post={post}/>
+                    ))}
+                </Carousel>
+            </div>
+        </section>
       </main>
     </>
   )
