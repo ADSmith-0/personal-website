@@ -24,7 +24,7 @@ export const getStaticProps:GetStaticProps = async () => {
     }
   }
 }
-export default function Home({ projects, posts }:{projects:ProjectType[], posts:PostType[]}) {
+export default function Home({ projects, posts }:{ projects:ProjectType[], posts:PostType[] }) {
   return (
     <>
       <Head>
@@ -40,14 +40,23 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
               alt="Picture of Adam"
               id={styles.profile_picture}
             />
-            <div id={styles.links}>
-              <h3 id={styles.dev_name}>Adam Smith</h3>
+            <h3 id={styles.dev_name}>Adam Smith</h3>
+            <div id={styles.social_links}>
               <a href="https://www.linkedin.com/in/adam-smith-9728511ba/" className={styles.social_link}>
                 <Image
-                  src="/images/linkedin.png"
+                  src={`/images/linkedin-light.png`}
                   height={35}
                   width={35}
                   alt="LinkedIn Icon"
+                  className={styles.social_icon}
+                />
+              </a>
+              <a href="https://github.com/ADSmith-0" className={styles.social_link}>
+                <Image
+                  src={`/images/github-logo-light.png`}
+                  height={35}
+                  width={35}
+                  alt="Github Icon"
                   className={styles.social_icon}
                 />
               </a>
@@ -74,7 +83,7 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
                     </p>
                 </div>
                 <Image 
-                    id={styles.projects_image}
+                    className={styles.block_image}
                     src="/images/projects.jpg"
                     height={350}
                     width={350}
@@ -92,7 +101,7 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
         <section className={styles.blocks}>
             <section id={styles.posts_description} className={styles.description_section}>
                 <Image
-                    id={styles.projects_image}
+                    className={styles.block_image}
                     src="/images/projects.jpg"
                     height={350}
                     width={350}
@@ -114,7 +123,7 @@ export default function Home({ projects, posts }:{projects:ProjectType[], posts:
             <div className={styles.carousel_container}>
                 <Carousel className={styles.carousel_section}>
                     {posts.map((post, index) => (
-                            <PostCard key={index} post={post}/>
+                        <PostCard key={index} post={post}/>
                     ))}
                 </Carousel>
             </div>
