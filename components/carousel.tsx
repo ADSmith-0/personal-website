@@ -2,16 +2,16 @@ import styles from '../styles/carousel.module.css';
 import { useState, useEffect, useRef } from 'react';
 export default function Carousel({ children }:any){
     const carouselRef = useRef(null);
-    const [width, setWidth] = useState(0);
+    const [cardWidth, setCardWidth] = useState(0);
     const [ scrollAmount, setScrollAmount ] = useState(0);
-    const scrollLeft = () => setScrollAmount(Math.max(0, scrollAmount - width));
+    const scrollLeft = () => setScrollAmount(Math.max(0, scrollAmount - cardWidth));
     const scrollRight = () => {
         let displayNumber = (window.innerWidth < 1300) ? 1 : 2; 
-        setScrollAmount(Math.min(scrollAmount + width, ((children.length-displayNumber)*width)));
+        setScrollAmount(Math.min(scrollAmount + cardWidth, ((children.length-displayNumber)*cardWidth)));
     }
     useEffect(() => {
-        let width = (window.innerWidth < 500) ? 0.85*window.innerWidth+10 : ((window.innerWidth < 1300)? 460 : 910);
-        setWidth(width);
+        let cardWidth = (window.innerWidth < 500) ? 0.85*window.innerWidth+10 : ((window.innerWidth < 1300)? 460 : 910);
+        setCardWidth(cardWidth);
     }, []);
     useEffect(() => {
         // @ts-ignore
