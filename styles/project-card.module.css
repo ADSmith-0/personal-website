@@ -72,6 +72,7 @@
 }
 #description_container {
     align-self: start;
+    flex-direction: column;
 }
 .links {
     display: grid;
@@ -84,6 +85,7 @@
     color: #fff;
     padding: 10px 15px;
     line-height: 1rem;
+    text-align: center;
     transition: background-color 0.2s linear 0s;
 }
 #githubLink { background-color: #161b22; }
@@ -107,4 +109,16 @@
         transition: all 0.2s ease-in-out 0s;
     }
     #githubLink:hover { background-color: #fff; }
+}
+@media (max-width: 800px) {
+    .card {
+        min-width: 85vw;
+    }
+    .links {
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+    }
+    .link {
+        padding: 20px 0;
+    }
 }

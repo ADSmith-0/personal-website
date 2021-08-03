@@ -1,9 +1,9 @@
-#container {
+.container {
     position: relative;
     width: 910px;
     margin: auto;
 }
-#carousel {
+.carousel {
     gap: 10px;
     width: inherit;
     overflow-x: scroll;
@@ -37,7 +37,13 @@
     100% { opacity: 1; }
 }
 @media(max-width: 1300px){
-    #container {
+    .container {
         width: 450px;
+    }
+}
+@media (max-width: 500px) {
+    .container {
+        width: 85vw;
+        margin: auto;
     }
 }

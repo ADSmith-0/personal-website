@@ -93,7 +93,7 @@ export default function Home({ projects, posts }:{ projects:ProjectType[], posts
             <div className={styles.carousel_container}>
                 <Carousel className={styles.carousel_section}>
                     {projects.map((project, index) => (
-                            <ProjectCard key={index} project={project}/>
+                        <ProjectCard key={index} project={project}/>
                     ))}
                 </Carousel>
             </div>

@@ -38,3 +38,6 @@
     #main_wrapper { background-color: #fafafa; }
     #CV_download { color: #fff; }
 }
+@media(max-width: 480px){
+    .list { grid-template-columns: 1fr; }
+}
