@@ -24,10 +24,10 @@ export default function Carousel({ children }:any){
     return (
         <div className={styles.container}>
             <button id={styles.left_btn} className={styles.btn} onClick={scrollLeft}>➜</button>
+            <button id={styles.right_btn} className={styles.btn} onClick={scrollRight}>➜</button>
             <div ref={carouselRef} className={styles.carousel}>
                 { children }
             </div>
-            <button id={styles.right_btn} className={styles.btn} onClick={scrollRight}>➜</button>
         </div>
     )
 }

@@ -121,10 +121,13 @@
     #dev_name { color: #000; }
     #intro_text { color: #222; }
     .social_icon { filter: brightness(0); }
-    .carousel_container { background-image: linear-gradient(45deg, #cecece, #fff, #cecece); }
+    /* .carousel_container { background-image: linear-gradient(45deg, #cecece, #fff, #cecece); } */
 }
 @media(max-width: 480px) {
     .description_section {
         grid-template-columns: 1fr;
+    }
+    .arrow {
+        display: inline-block;
     }
 }
