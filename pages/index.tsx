@@ -103,10 +103,11 @@ export default function Home({ projects, posts }:{ projects:ProjectType[], posts
             <section id={styles.posts_description} className={styles.description_section}>
                 <Image
                     className={styles.block_image}
-                    src="/images/projects.jpg"
+                    src="/images/posts.jpg"
                     height={350}
                     width={350}
-                    alt="Image representing posts"
+                    objectFit="cover"
+                    alt="Image representing posts by Miguel Á. Padriñán from Pexels"
                 />
                 <section id={styles.posts_text}>
                     <Link href="/projects">
