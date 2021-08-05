@@ -42,7 +42,7 @@ export default function about() {
                             <li className={experience}>
                                 <Details 
                                     summary = "Web Developer - Tillison Consulting:"
-                                    content = "Designing and building websites of all different shapes and varieties, mstly using wordpress and PHP, but occassionally when I get to choose, it&apos;s fullstack JavaScript (MERN)."
+                                    content = "Designing and building websites of all different shapes and varieties, mostly using wordpress and PHP, but occassionally when I get to choose, it&apos;s fullstack JavaScript (MERN)."
                                 />
                             </li>
                         </ul>

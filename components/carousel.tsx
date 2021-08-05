@@ -6,7 +6,7 @@ export default function Carousel({ children }:any){
     const [ scrollAmount, setScrollAmount ] = useState(0);
     const scrollLeft = () => setScrollAmount(Math.max(0, scrollAmount - cardWidth));
     const scrollRight = () => {
-        let displayNumber = (window.innerWidth < 1300) ? 1 : 3; 
+        let displayNumber = (window.innerWidth < 500) ? 1 : ((window.innerWidth < 1300)? 2 : 3); 
         setScrollAmount(Math.min(scrollAmount + cardWidth, ((children.length-displayNumber)*cardWidth)));
     }
     useEffect(() => {

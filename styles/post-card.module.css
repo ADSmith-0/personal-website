@@ -52,6 +52,9 @@
     .card:hover{ box-shadow: 0 6px 12px 0 #00000033; }
     .date { background-color: #393b3f; }
 }
-@media (max-width: 500px) {
-    .card { min-width: 85vw; }
+@media (max-width: 800px) {
+    .card {
+        min-width: 100%;
+        width: 100%;
+    }
 }
