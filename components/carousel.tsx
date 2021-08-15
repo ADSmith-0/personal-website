@@ -10,11 +10,11 @@ export default function Carousel({ children }:any){
         setScrollAmount(Math.min(scrollAmount + cardWidth, ((children.length-displayNumber)*cardWidth)));
     }
     useEffect(() => {
-        let cardWidth = (window.innerWidth < 500) ? 0.85*window.innerWidth+10 : ((window.innerWidth < 1300)? 460 : 910);
+        let cardWidth = (window.innerWidth < 500) ? 0.85*window.innerWidth+10 : ((window.innerWidth < 1300) ? 460 : 910);
         setCardWidth(cardWidth);
     }, []);
     useEffect(() => {
-        // @ts-ignore
+        // @ts-ignore 
         carouselRef.current.scrollTo({
             top: 0,
             left: scrollAmount, 

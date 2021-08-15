@@ -5,13 +5,14 @@
     box-shadow: 0 4px 8px 0 #00000033;
     transition: 0.3s;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px 30px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto 1fr auto;
     gap: 10px;
     align-items: center;
-    width: 100%;
+    width: 32.5%;
+    min-width: 32.5%;
 }
 .card:hover{ box-shadow: 0 8px 16px 0 #00000033; }
 .title {
@@ -102,11 +103,13 @@
 }
 @media(max-width: 1000px) {
     .card {
-        min-width: 50%;
+        width: 49.1%;
+        min-width: 49.1%;
     }
 }
 @media(max-width: 600px) {
     .card {
+        width: 100%;
         min-width: 100%;
     }
 }
