@@ -120,7 +120,7 @@
     #intro_text { color: #222; }
     .social_icon { filter: brightness(0); }
     /* .carousel_container { background-image: linear-gradient(45deg, #cecece, #fff, #cecece); } */
-    .carousel_container { background-color: #cecece;}
+    .carousel_container { background-color: #eee;}
 }
 @media(max-width: 480px) {
     .description_section {

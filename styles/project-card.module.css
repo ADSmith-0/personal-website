@@ -11,7 +11,6 @@
     grid-template-rows: auto auto auto auto auto 1fr auto;
     gap: 10px;
     align-items: center;
-    width: 32.5%;
     min-width: 32.5%;
 }
 .card:hover{ box-shadow: 0 8px 16px 0 #00000033; }
@@ -103,13 +102,11 @@
 }
 @media(max-width: 1000px) {
     .card {
-        width: 49.1%;
         min-width: 49.1%;
     }
 }
 @media(max-width: 600px) {
     .card {
-        width: 100%;
         min-width: 100%;
     }
 }
