@@ -35,14 +35,14 @@ export default function about() {
                         <ul id={experience_list} className={list}>
                             <li className={experience}>
                                 <Details 
-                                    summary = "Full stack developer, Lead android developer - Power of Music:"
-                                    content = "A small startup based around a dating app."
+                                    summary = "Web Developer - Tillison Consulting:"
+                                    content = "Designing and building websites of all different shapes and varieties, mostly using wordpress and PHP, but occassionally when I get to choose, it&apos;s fullstack JavaScript (MERN)."
                                 />
                             </li>
                             <li className={experience}>
                                 <Details 
-                                    summary = "Web Developer - Tillison Consulting:"
-                                    content = "Designing and building websites of all different shapes and varieties, mostly using wordpress and PHP, but occassionally when I get to choose, it&apos;s fullstack JavaScript (MERN)."
+                                    summary = "Lead android developer, Full stack developer - Power of Music:"
+                                    content = "A startup based around a dating app. I designed and developed the front end Android application and backend authorisation pipeline and matching algorithm."
                                 />
                             </li>
                         </ul>

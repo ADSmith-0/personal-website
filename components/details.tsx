@@ -3,7 +3,11 @@ const { container, plus, minus } = styles;
 import { useState } from 'react';
 export default function Details({summary, content }:{summary:string, content:string}) {
     const [ open, setOpen ] = useState(false); 
-    const changeState = () => setOpen(!open);
+    const changeState = (e:any) => {
+        if(!(e.target.localName == "p")){
+            setOpen(!open);
+        }
+    };
     return (
         <details id={container} onClick={changeState}>
             <summary id={styles.summary} className={(open)?minus:plus}>{ summary }</summary>
