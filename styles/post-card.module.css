@@ -9,7 +9,6 @@
     align-items: center;
     gap: 10px;
     padding: 30px;
-    min-width: 31.9%;
 }
 .cover_image { border-radius: 5px; }
 .title {
@@ -41,16 +40,6 @@
     color: #fff;
     padding: 10px 15px;
     user-select: none;
-}
-@media(max-width: 1000px) {
-    .card {
-        min-width: 48.8%;
-    }
-}
-@media(max-width: 600px) {
-    .card {
-        min-width: 100%;
-    }
 }
 @media(prefers-color-scheme: dark) {
     .card {

@@ -5,7 +5,7 @@ import StatusTrafficLight from './status-traffic-light';
 import LiveTrafficLight from './live-traffic-light';
 export default function projectCard({ project:{frontmatter}}:{project: ProjectType}) {
     return (
-        <div className={styles.card}>
+        <article className={styles.card}>
             <Image 
                 src={frontmatter.cover_image}
                 className={styles.cover_image}
@@ -43,6 +43,6 @@ export default function projectCard({ project:{frontmatter}}:{project: ProjectTy
                         Link to live project &rarr;
                 </a>
             </div>
-        </div>
+        </article>
     )
 }

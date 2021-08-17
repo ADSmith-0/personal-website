@@ -15,7 +15,7 @@ export default function PostCard({ post:{
         }
     }}: {post: PostType}) {
     return (
-        <div className={styles.card}>
+        <article className={styles.card}>
             <Image
                 src={cover_image}
                 className={styles.cover_image}
@@ -30,6 +30,6 @@ export default function PostCard({ post:{
             <Link href={path.join(process.cwd(), 'posts', slug)}>
                 <a className={styles.btn_readmore}>Read more &rarr;</a>
             </Link>
-        </div>
+        </article>
     )
 }
