@@ -10,7 +10,7 @@ import { PostType } from '../types/post';
 import Carousel from '../components/carousel';
 import ProjectCard from '../components/project-card';
 import PostCard from '../components/post-card';
-import { sortByDate } from '../lib/util';
+import { sortByOrder, sortByDate } from '../lib/util';
 export const getStaticProps:GetStaticProps = async () => {
   const Projects = getAllProjectsData();
   const Posts = getAllPostsData();
@@ -20,7 +20,7 @@ export const getStaticProps:GetStaticProps = async () => {
   const featured_posts = Posts.filter(post => post.frontmatter.featured);
   return {
     props: {
-      projects: featured_projects,
+      projects: featured_projects.sort(sortByOrder),
       posts: featured_posts.sort(sortByDate)
     }
   }
