@@ -4,8 +4,8 @@ live_link: '#'
 title: 'Portfolio Website'
 cover_image: '/images/projects/image2.jpg'
 tags: ['Next.js']
-status: 'In Progress'
-live: 'No'
+status: 'Completed'
+live: 'Yes'
 description: 'The portfolio website that you are currently on'
 order: 6
 featured: false

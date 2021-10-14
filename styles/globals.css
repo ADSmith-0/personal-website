@@ -18,11 +18,11 @@ a {
   --primary-colour: #0d6efd;
 }
 @media(prefers-color-scheme: dark){
-  body {
-    background-color: #090c10;
+  html, body {
+    background-color: #212121;
   }
   *{
-    color: #c9d1d9;
+    color: #fafafa;
   }
   a {
     color: #f0f6fc

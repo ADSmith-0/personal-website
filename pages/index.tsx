@@ -32,7 +32,13 @@ export default function Home({ projects, posts }:{ projects:ProjectType[], posts
         <title>Home</title>
       </Head>
       <main className={styles.container}>
-        <section id={styles.head}>
+        <section id={styles.head} className={styles.width_75}>
+          <div id={styles.head_intro}>
+            <h1 id={styles.title}>Welcome to my website</h1>
+            <p id={styles.intro_text} className={styles.description}>Hello, My name is Adam and I&apos;m a 23 year old web developer. 
+              I enjoy building websites and web apps and learning new technologies. Find out more about me in my <Link href="/about"><a className={styles.link}>about page</a></Link>.
+            </p>
+          </div>
           <aside id={styles.side_bar}>
             <Image
               src='/images/profile-picture.jpg'
@@ -63,22 +69,16 @@ export default function Home({ projects, posts }:{ projects:ProjectType[], posts
               </a>
             </div>
           </aside>
-          <div id={styles.head_intro}>
-            <h1 id={styles.title}>Welcome to my website</h1>
-            <p id={styles.intro_text} className={styles.description}>Hello, My name is Adam and I&apos;m a 23 year old web developer. 
-              I enjoy building websites and web apps and learning new technologies. Find out more about me in my <Link href="/about"><a className={styles.link}>about page</a></Link>.
-            </p>
-          </div>
         </section>
-        <section className={styles.blocks}>
-            <section id={styles.projects_description} className={styles.description_section}>
-                <div id={styles.projects_text}>
+        <section className={`${styles.blocks} ${styles.blue_background}`}>
+            <section className={styles.description_section}>
+                <div className={styles.block_text}>
                     <Link href="/projects">
-                        <a className={styles.link}>
-                            <h2 className={styles.subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
+                        <a className={styles.block_link}>
+                            <h2 className={styles.block_subtitle}>Projects <span className={styles.arrow}>&rarr;</span></h2>
                         </a>
                     </Link>
-                    <p className={styles.description}>
+                    <p className={styles.block_description}>
                         If you&apos;re interested in looking at the projects that I&apos;ve made then head over
                         to the projects page, here&apos;s some of the highlights:
                     </p>
@@ -91,16 +91,28 @@ export default function Home({ projects, posts }:{ projects:ProjectType[], posts
                     alt="Image representing projects"
                 />
             </section>
-            <div className={styles.carousel_container}>
-                <Carousel className={styles.carousel_section}>
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project}/>
-                    ))}
-                </Carousel>
-            </div>
         </section>
-        <section className={styles.blocks}>
-            <section id={styles.posts_description} className={styles.description_section}>
+        <div className={styles.carousel_container}>
+            <Carousel className={styles.carousel_section}>
+                {projects.map((project, index) => (
+                    <ProjectCard key={index} project={project}/>
+                ))}
+            </Carousel>
+        </div>
+        <section className={`${styles.blocks} ${styles.pink_background}`}>
+            <section className={`${styles.description_section} `}>
+                <section className={styles.block_text}>
+                    <Link href="/projects">
+                        <a className={styles.block_link}>
+                            <h2 className={styles.block_subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
+                        </a>
+                    </Link>
+                    <p className={styles.block_description}>
+                        I sometimes find something that I want to write about, if you&apos;re interesting
+                        in seeing what I write about then head over to the posts page. Here are some
+                        highlights:
+                    </p>
+                </section>
                 <Image
                     className={styles.block_image}
                     src="/images/posts.jpg"
@@ -109,27 +121,15 @@ export default function Home({ projects, posts }:{ projects:ProjectType[], posts
                     objectFit="cover"
                     alt="Image representing posts by Miguel Á. Padriñán from Pexels"
                 />
-                <section id={styles.posts_text}>
-                    <Link href="/projects">
-                        <a className={styles.link}>
-                            <h2 className={styles.subtitle}>Posts <span className={styles.arrow}>&rarr;</span></h2>
-                        </a>
-                    </Link>
-                    <p className={styles.description}>
-                        I sometimes find something that I want to write about, if you&apos;re interesting
-                        in seeing what I write about then head over to the posts page. Here are some
-                        highlights:
-                    </p>
-                </section>
             </section>
-            <div className={styles.carousel_container}>
-                <Carousel className={styles.carousel_section}>
-                    {posts.map((post, index) => (
-                        <PostCard key={index} post={post}/>
-                    ))}
-                </Carousel>
-            </div>
         </section>
+        <div className={styles.carousel_container}>
+            <Carousel className={styles.carousel_section}>
+                {posts.map((post, index) => (
+                    <PostCard key={index} post={post}/>
+                ))}
+            </Carousel>
+        </div>
       </main>
     </>
   )

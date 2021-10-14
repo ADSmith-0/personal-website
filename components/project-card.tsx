@@ -1,17 +1,18 @@
 import { ProjectType } from '../types/project';
 import Image from 'next/image';
+import cardStyle from '../styles/card.module.css';
 import styles from '../styles/project-card.module.css';
 import StatusTrafficLight from './status-traffic-light';
 import LiveTrafficLight from './live-traffic-light';
 export default function projectCard({ project:{frontmatter}}:{project: ProjectType}) {
     return (
-        <article className={styles.card}>
+        <article className={`${styles.card} ${cardStyle.card}`}>
             <Image 
                 src={frontmatter.cover_image}
                 className={styles.cover_image}
                 height={300}
                 width={500}
-                objectFit="contain"
+                objectFit="cover"
                 alt={frontmatter.title+" cover image"}
             />
             <h3 className={styles.title}>{frontmatter.title}</h3>

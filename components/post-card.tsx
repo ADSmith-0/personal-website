@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import path from 'path';
 import { PostType } from '../types/post';
+import cardStyle from '../styles/card.module.css';
 import styles from '../styles/post-card.module.css';
 import Image from 'next/image';
 
@@ -15,7 +16,7 @@ export default function PostCard({ post:{
         }
     }}: {post: PostType}) {
     return (
-        <article className={styles.card}>
+        <article className={`${styles.card} ${cardStyle.card}`}>
             <Image
                 src={cover_image}
                 className={styles.cover_image}
