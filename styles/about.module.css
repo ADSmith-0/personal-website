@@ -35,7 +35,6 @@
 .skill::marker { content: "✅"; }
 .to_learn::marker { content: "👉"; }
 @media(prefers-color-scheme: light){
-    #main_wrapper { background-color: #fafafa; }
     #CV_download { color: #fff; }
 }
 @media(max-width: 480px){
